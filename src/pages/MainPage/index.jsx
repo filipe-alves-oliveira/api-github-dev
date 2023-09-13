@@ -8,7 +8,6 @@ function MainPage() {
   const [login, setLogin] = useState();
   // setLogin é a função setter da login variável de estado, desestruturação.
   return (
-    <div>
       <Container>
         <Logo src={githubLogo} alt="API github" />
         <Title>API Github</Title>
@@ -24,7 +23,6 @@ function MainPage() {
           </Button>
         </Form>
       </Container>
-    </div>
   );
 }
 
