@@ -6,9 +6,9 @@ function Repository() {
   return (
       <Container color="blue">
         <Name>Repository Name</Name>
-        <Description>Respository Description</Description>
+        <Description>Repository Description</Description>
         <Footer color="red">
-            <Lang>Respository Lang</Lang>
+            <Lang>Repository Lang</Lang>
             <Link href="https://github.com/filipe-alves-oliveira" target="_blank">Ver</Link>
         </Footer>
       </Container>

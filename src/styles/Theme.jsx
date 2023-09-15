@@ -52,7 +52,7 @@ export const theme = {
     "3xl": rem(32),
     "4xl": rem(40),
     "5xl": rem(64),
-    title: "1.3rem",
+    title: "1.5rem",
     subtitle: "1.25rem",
   },
   breakpoints: {

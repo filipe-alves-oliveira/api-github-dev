@@ -36,7 +36,8 @@ export const Login = styled.h1`
 
 export const Name = styled.h2`
     font-size: ${(props) => props.theme.fontSize.subtitle};
-    font-weight: normal;
+    font-weight: lighter;
+    
 
     @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
     display: none;

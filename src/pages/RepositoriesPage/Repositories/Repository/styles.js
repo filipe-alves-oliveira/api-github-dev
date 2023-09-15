@@ -10,12 +10,14 @@ export const Container = styled.div`
 `;
 
 export const Name = styled.h3`
-    font-size: ${(props) => props.theme.fontSize.lg};
+    font-size: ${(props) => props.theme.fontSize.xl};
     font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
 `;
 
 export const Description = styled.p`
-    font-size: ${(props) => props.theme.fontSize.sm};
+    font-size: ${(props) => props.theme.fontSize.md};
     line-height: 1.25;
     margin: 1rem 0;
 `;
