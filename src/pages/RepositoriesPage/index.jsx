@@ -18,11 +18,28 @@ function RepositoriesPage() {
     location: "Cândido Mota - SP",
   };
 
+  // const repositories = [
+  //   {name: "Repo 1", desciption: "Descrição", html_url: "https://github.com/filipe-alves-oliveira", language: "JavaScript"},
+  //   {name: "Repo 2", desciption: "Descrição", html_url: "https://github.com/filipe-alves-oliveira", language: "Java"},
+  //   {name: "Repo 3", desciption: "Descrição", html_url: "https://github.com/filipe-alves-oliveira", language: "PHP"},
+  //   {name: "Repo 4", desciption: "Descrição", html_url: "https://github.com/filipe-alves-oliveira", language: "Ruby"},
+  //   {name: "Repo 5", desciption: "Descrição", html_url: "https://github.com/filipe-alves-oliveira", language: "JavaScript"},
+  //   {name: "Repo 6", desciption: "Descrição", html_url: "https://github.com/filipe-alves-oliveira", language: "React"},
+  // ];
+
+  // Calculo dos filters
+  const languages = [
+    { name: "JavaScript", count: 5, color: "#FCC419" },
+    { name: "Java", count: 2, color: "#F83600" },
+    { name: "PHP", count: 3, color: "#7E5CEF" },
+    { name: "Ruby", count: 4, color: "#FE5895" },
+  ]
+
   return (
     <Container>
       <Sidebar>
         <Profile user={user} />
-        <Filter />
+        <Filter languages={languages} />
       </Sidebar>
       <Main>
         <Repositories />
