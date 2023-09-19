@@ -5,6 +5,7 @@ import Filter from "./Filter";
 import Repositories from "./Repositories";
 
 import { Container, Sidebar, Main } from "./styles";
+import { getLangsFrom } from "../../services/api";
 
 function RepositoriesPage() {
   const user = {
@@ -18,22 +19,52 @@ function RepositoriesPage() {
     location: "Cândido Mota - SP",
   };
 
-  // const repositories = [
-  //   {name: "Repo 1", desciption: "Descrição", html_url: "https://github.com/filipe-alves-oliveira", language: "JavaScript"},
-  //   {name: "Repo 2", desciption: "Descrição", html_url: "https://github.com/filipe-alves-oliveira", language: "Java"},
-  //   {name: "Repo 3", desciption: "Descrição", html_url: "https://github.com/filipe-alves-oliveira", language: "PHP"},
-  //   {name: "Repo 4", desciption: "Descrição", html_url: "https://github.com/filipe-alves-oliveira", language: "Ruby"},
-  //   {name: "Repo 5", desciption: "Descrição", html_url: "https://github.com/filipe-alves-oliveira", language: "JavaScript"},
-  //   {name: "Repo 6", desciption: "Descrição", html_url: "https://github.com/filipe-alves-oliveira", language: "React"},
-  // ];
+  const repositories = [
+    {
+      id: "1",
+      name: "Repo 1",
+      desciption: "Descrição",
+      html_url: "https://github.com/filipe-alves-oliveira",
+      language: "JavaScript",
+    },
+    {
+      id: "2",
+      name: "Repo 2",
+      desciption: "Descrição",
+      html_url: "https://github.com/filipe-alves-oliveira",
+      language: "Java",
+    },
+    {
+      id: "3",
+      name: "Repo 3",
+      desciption: "Descrição",
+      html_url: "https://github.com/filipe-alves-oliveira",
+      language: "PHP",
+    },
+    {
+      id: "4",
+      name: "Repo 4",
+      desciption: "Descrição",
+      html_url: "https://github.com/filipe-alves-oliveira",
+      language: "Ruby",
+    },
+    {
+      id: "5",
+      name: "Repo 5",
+      desciption: "Descrição",
+      html_url: "https://github.com/filipe-alves-oliveira",
+      language: "JavaScript",
+    },
+    {
+      id: "6",
+      name: "Repo 6",
+      desciption: "Descrição",
+      html_url: "https://github.com/filipe-alves-oliveira",
+      language: "Ruby",
+    },
+  ];
 
-  // Calculo dos filters
-  const languages = [
-    { name: "JavaScript", count: 5, color: "#FCC419" },
-    { name: "Java", count: 2, color: "#F83600" },
-    { name: "PHP", count: 3, color: "#7E5CEF" },
-    { name: "Ruby", count: 4, color: "#FE5895" },
-  ]
+  const languages = getLangsFrom(repositories)
 
   return (
     <Container>
@@ -42,7 +73,7 @@ function RepositoriesPage() {
         <Filter languages={languages} />
       </Sidebar>
       <Main>
-        <Repositories />
+        <Repositories repositories={repositories} />
       </Main>
     </Container>
   );
