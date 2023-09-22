@@ -2,8 +2,12 @@ import axios from "axios";
 import { langColor } from "./config";
 
 const api = axios.create({
+  // significa que ao inves de colocar a url: http://localhost:5000 chumbada utilizamos do arquivo env
   baseURL: process.env.REACT_APP_API_BASE_URL,
 });
+
+
+export const getUser  = async (login) => api.get(`/users/${login}`);
 
 export default api;
 
