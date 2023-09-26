@@ -19,7 +19,9 @@ function Filter({ languages, currentLanguage, onClick }) {
   return (
     <Container>
       {selectors}
-      <Cleaner onClick={() => onClick && onClick(undefined)}>Limpar</Cleaner>
+      <Cleaner onClick={() => onClick && onClick(undefined)}>
+        <button type="button">Limpar</button>
+      </Cleaner>
     </Container>
   );
 }

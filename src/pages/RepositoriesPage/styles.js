@@ -20,7 +20,6 @@ export const Sidebar = styled.aside`
     background: ${(props) => props.theme.colors.gray900};
     min-width: 20rem;
     max-height: 100vh;
-    overflow-y: hidden;
 `;
 
 export const Main = styled.section`
