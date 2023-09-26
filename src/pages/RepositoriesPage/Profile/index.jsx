@@ -1,6 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { MdGroup, MdLocationCity, MdWork, MdLink } from "react-icons/md";
+import {
+  MdGroup,
+  MdLocationCity,
+  MdWork,
+  MdLink,
+  MdSearch,
+} from "react-icons/md";
 
 import { Container, Header, Avatar, Login, Name, Inner, Data } from "./styles";
 
@@ -19,8 +25,14 @@ function Profile({ user }) {
         </Data>
         <Data>
           <MdWork size={20} />
-          {user.company} - &nbsp;
-          <a href="https://opah.com.br">https://opah.com.br/ </a>
+          {user.company}&nbsp;
+          <a
+            href={`https://www.google.com/search?q=${user.company}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MdSearch style={{ width: "22", height: "22", display: "flex" }} />
+          </a>
         </Data>
         <Data>
           <MdLocationCity size={20} />
