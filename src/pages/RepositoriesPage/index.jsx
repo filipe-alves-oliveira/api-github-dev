@@ -107,6 +107,8 @@ function RepositoriesPage() {
         />
       </Sidebar>
       <Main>
+      <button type='button'>
+        <a href="http://localhost:3000/">Nova Pesquisa</a></button>
         <Repositories
           repositories={repositories}
           currentLanguage={currentLanguage}
