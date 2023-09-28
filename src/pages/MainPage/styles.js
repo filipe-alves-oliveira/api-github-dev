@@ -56,10 +56,14 @@ export const Button = styled(Link)`
   border-bottom: 3px solid ${(props) => props.theme.colors.gray600};
   cursor: pointer;
   border-radius: 5px;
-  transition: 5;
+  transition: 0.5;
 
   &:hover {
     background: ${(props) => props.theme.colors.gray500};
     opacity: 0.5;
+  }
+
+  &[disabled] {
+    pointer-events: none; /* Prevent clicking on the disabled button */
   }
 `;
