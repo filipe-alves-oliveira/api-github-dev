@@ -31,7 +31,13 @@ function Profile({ user }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <MdSearch style={{ width: "22", height: "22", display: "flex" }} />
+            {user.company === null ? (
+              ""
+            ) : (
+              <MdSearch
+                style={{ width: "22", height: "22", display: "flex" }}
+              />
+            )}
           </a>
         </Data>
         <Data>
