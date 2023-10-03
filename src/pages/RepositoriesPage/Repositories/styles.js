@@ -9,4 +9,12 @@ export const Container = styled.div`
     @media screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
         grid-template-columns: auto;
     }
+
+    @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
+        grid-template-columns: auto;
+    }
+
+    @media screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
+        grid-template-columns: auto;
+    }
 `;
