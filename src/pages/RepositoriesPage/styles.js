@@ -26,8 +26,6 @@ export const Sidebar = styled.aside`
 export const Main = styled.section`
     background: ${(props) => props.theme.colors.gray800};
     width: 100%;
-    //height: 100vh;
-    //overflow-y: hidden;
     padding: 40px;
 
     @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {

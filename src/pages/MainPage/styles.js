@@ -42,6 +42,14 @@ export const Input = styled.input`
   &::placeholder {
     color: ${(props) => props.theme.colors.gray600};
   }
+
+  @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    font-size: 16px;
+  }
 `;
 
 export const Button = styled(Link)`
