@@ -1,12 +1,19 @@
 import React, { useEffect, useState } from "react";
 
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from "react-router-dom";
 
 import Profile from "./Profile";
 import Filter from "./Filter";
 import Repositories from "./Repositories";
 
-import { Loading, Container, Sidebar, Main } from "./styles";
+import {
+  Loading,
+  Container,
+  Sidebar,
+  Main,
+  ButtonContainer,
+  Button,
+} from "./styles";
 import { getUser, getRepos, getLangsFrom } from "../../services/api";
 
 function RepositoriesPage() {
@@ -17,11 +24,13 @@ function RepositoriesPage() {
   const [currentLanguage, setCurrentLanguage] = useState();
   const [loading, setLoading] = useState(true);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     const loadData = async () => {
       const [userResponse, repositoriesResponse] = await Promise.all([
         getUser(login),
-        getRepos(login)
+        getRepos(login),
       ]);
       setUser(userResponse.data);
       setRepositories(repositoriesResponse.data);
@@ -30,7 +39,7 @@ function RepositoriesPage() {
     };
 
     loadData();
-  } , []);
+  }, []);
 
   // const user = {
   //   login: "filipe-alves-oliveira",
@@ -92,8 +101,12 @@ function RepositoriesPage() {
     setCurrentLanguage(language);
   };
 
-  if(loading) {
-    return <Loading>Carregando...</Loading>
+  const onNewSearchClick = () => {
+    navigate("/");
+  };
+
+  if (loading) {
+    return <Loading>Carregando...</Loading>;
   }
 
   return (
@@ -107,12 +120,13 @@ function RepositoriesPage() {
         />
       </Sidebar>
       <Main>
-      <button type='button'>
-        <a href="http://localhost:3000/">Nova Pesquisa</a></button>
         <Repositories
           repositories={repositories}
           currentLanguage={currentLanguage}
         />
+        <ButtonContainer>
+          <Button onClick={onNewSearchClick}>Realizar nova Pesquisa</Button>
+        </ButtonContainer>
       </Main>
     </Container>
   );

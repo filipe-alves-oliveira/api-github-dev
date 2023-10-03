@@ -20,13 +20,14 @@ export const Sidebar = styled.aside`
     background: ${(props) => props.theme.colors.gray900};
     min-width: 20rem;
     max-height: 100vh;
+    //overflow-y: hidden;
 `;
 
 export const Main = styled.section`
     background: ${(props) => props.theme.colors.gray800};
     width: 100%;
-    height: 100vh;
-    overflow-y: hidden;
+    //height: 100vh;
+    //overflow-y: hidden;
     padding: 40px;
 
     @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
@@ -36,4 +37,20 @@ export const Main = styled.section`
     @media screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
         padding: 40px 20px;
     }
+`;
+
+export const Button = styled.button`
+    background: white;
+    color: black;
+    border: none;
+    padding: 9px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-bottom: 20px;
+`;
+
+export const ButtonContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 `;
