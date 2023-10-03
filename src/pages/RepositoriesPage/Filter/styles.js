@@ -49,12 +49,14 @@ export const Selector = styled.button`
 `;
 
 export const Cleaner = styled.button`
-  background: transparent;
-  color: ${(props) => props.theme.colors.gray300};
+  background: ${(props) => props.theme.colors.gray300};
+  color: ${(props) => props.theme.colors.gray900};
   border: none;
   text-align: center;
-  padding: 1rem;
+  padding: 9px;
   cursor: pointer;
+  margin: 7px 100px 14px;
+  border-radius: 8px;
 
   &:hover {
     color: rgba(255, 255, 0.5);
@@ -62,6 +64,12 @@ export const Cleaner = styled.button`
 
   @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
     text-align: left;
-    padding: 0 1rem;
+    background: ${(props) => props.theme.colors.gray300};
+    color: ${(props) => props.theme.colors.gray900};
+    border: none;
+    padding: 9px;
+    cursor: pointer;
+    margin: 0px 0px;
+    border-radius: 8px;
   }
 `;
